@@ -14,13 +14,10 @@ class CustomFindUsagesHandler(psiElement: PsiElement): FindUsagesHandler(psiElem
         processor: Processor<in UsageInfo>,
         options: FindUsagesOptions
     ): Boolean {
-        println(element)
         if (element is KtNamedFunction) {
             println("できた")
         }
 
-//        element.instanceOf(PsiTreeUtil)
-//        element.elementType
         return super.processElementUsages(element, processor, options)
     }
 }

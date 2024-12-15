@@ -4,16 +4,12 @@ import org.jetbrains.intellij.platform.gradle.TestFrameworkType
 
 plugins {
     id("java") // Java support
-//    id("org.jetbrains.intellij") version "1.17.4"
     alias(libs.plugins.kotlin) // Kod("org.jetbrains.intellij") version "1.17.tlin support
     alias(libs.plugins.intelliJPlatform) // IntelliJ Platform Gradle Plugin
     alias(libs.plugins.changelog) // Gradle Changelog Plugin
     alias(libs.plugins.qodana) // Gradle Qodana Plugin
     alias(libs.plugins.kover) // Gradle Kover Plugin
 }
-//intellij {
-//    plugins.set(listOf("java"))
-//}
 
 
 group = providers.gradleProperty("pluginGroup").get()
@@ -44,7 +40,6 @@ dependencies {
 
         // Plugin Dependencies. Uses `platformBundledPlugins` property from the gradle.properties file for bundled IntelliJ Platform plugins.
         bundledPlugins(providers.gradleProperty("platformBundledPlugins").map { it.split(',') })
-//        bundledPlugins("org.jetbrains.kotlin")
 
         // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file for plugin from JetBrains Marketplace.
         plugins(providers.gradleProperty("platformPlugins").map { it.split(',') })
