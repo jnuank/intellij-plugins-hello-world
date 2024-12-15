@@ -18,6 +18,7 @@ class CustomFindUsageFactory: FindUsagesHandlerFactory() {
 
 
     override fun createFindUsagesHandler(p0: PsiElement, p1: Boolean): FindUsagesHandler? {
+        thisLogger().warn("ここに出る")
         return CustomFindUsagesHandler(p0)
     }
 }

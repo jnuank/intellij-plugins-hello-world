@@ -5,7 +5,8 @@
     <vendor>jnuank</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-    <depends>com.intellij.modules.java</depends>
+<!--    <depends>com.intellij.modules.java</depends>-->
+    <depends>org.jetbrains.kotlin</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
