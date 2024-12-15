@@ -5,15 +5,20 @@
     <vendor>jnuank</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.jnuank.intellijpluginshelloworld.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+
+        <findUsagesHandlerFactory implementation="com.github.jnuank.intellijpluginshelloworld.findUsages.CustomFindUsageFactory"/>
     </extensions>
 
     <applicationListeners>
         <listener class="com.github.jnuank.intellijpluginshelloworld.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
     <idea-version since-build="242" until-build="243.*"/>
+
+
 </idea-plugin>
